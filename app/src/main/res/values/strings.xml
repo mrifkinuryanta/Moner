@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Moner</string>
+    <string name="text_title_record">Record</string>
+    <string name="text_title_transaction">Transaction</string>
+</resources>
