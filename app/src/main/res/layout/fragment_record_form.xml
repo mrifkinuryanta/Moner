@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ui.recordform.RecordFormFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_amount"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_amount"
+                style="@style/TextHintLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_money_24"
+                android:inputType="numberDecimal"
+                android:maxLength="13"
+                android:text="@string/text_hint_amount" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_payment"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconDrawable="@drawable/ic_drop_down_24"
+            app:endIconMode="custom"
+            app:layout_constraintTop_toBottomOf="@id/til_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_payment"
+                style="@style/TextHintLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_wallet_24"
+                android:focusable="false"
+                android:hint="@string/text_hint_payment" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_category"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconDrawable="@drawable/ic_drop_down_24"
+            app:endIconMode="custom"
+            app:layout_constraintTop_toBottomOf="@id/til_payment">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_category"
+                style="@style/TextHintLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_category_24"
+                android:focusable="false"
+                android:hint="@string/text_hint_category" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_date"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconDrawable="@drawable/ic_drop_down_24"
+            app:endIconMode="custom"
+            app:layout_constraintTop_toBottomOf="@id/til_category">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_date"
+                style="@style/TextHintLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_calendar_24"
+                android:focusable="false"
+                android:hint="@string/text_hint_date" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_note"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/til_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_note"
+                style="@style/TextHintLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_note_24"
+                android:hint="@string/text_hint_note"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="100" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_14sdp"
+            android:backgroundTint="@color/color_secondary"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/text_placeholder_save"
+            android:textAllCaps="false"
+            android:textColor="@color/color_secondary_variant"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_note"
+            app:layout_constraintVertical_bias="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

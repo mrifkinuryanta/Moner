@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.transaction.TransactionFragment">
+    android:orientation="vertical"
+    tools:context=".ui.main.transaction.TransactionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title_fragment" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_transaction"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/text_title_transaction" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_record"
+        tools:visibility="gone" />
 
-</FrameLayout>
+    <include
+        android:id="@+id/layout_placeholder"
+        layout="@layout/layout_placeholder" />
+</LinearLayout>

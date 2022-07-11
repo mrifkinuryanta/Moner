@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_corner"
+    android:backgroundTint="@color/white"
+    android:padding="@dimen/_14sdp"
+    app:layout_constraintGuide_percent="1">
+
+    <TextView
+        android:id="@+id/tv_title_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_placeholder_select_date"
+        android:textAlignment="center"
+        android:textColor="@color/color_secondary_variant"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_month"
+        style="@style/TextHintLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:drawableEnd="@drawable/ic_drop_down_24"
+        android:focusable="false"
+        app:layout_constraintEnd_toStartOf="@id/et_year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_date"
+        tools:text="February" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_year"
+        style="@style/TextHintLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:drawableEnd="@drawable/ic_drop_down_24"
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/et_month"
+        app:layout_constraintTop_toTopOf="@+id/et_month"
+        tools:text="2022" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:backgroundTint="@color/white"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/text_placeholder_cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toStartOf="@id/btn_ok"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_month" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_7sdp"
+        android:backgroundTint="@color/color_secondary"
+        android:padding="@dimen/_8sdp"
+        android:text="OK"
+        android:textAllCaps="false"
+        android:textColor="@color/color_secondary_variant"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_cancel"
+        app:layout_constraintTop_toTopOf="@+id/btn_cancel" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/btn_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

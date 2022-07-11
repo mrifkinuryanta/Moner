@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.recordform.RecordFormActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary_variant"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        tools:text="@string/text_placeholder_add_record" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_add_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/color_primary_variant"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorColor="@color/color_on_primary"
+        app:tabIndicatorHeight="@dimen/_4sdp"
+        app:tabPadding="@dimen/_8sdp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/TextTitleTabLayout"
+        app:tabTextColor="@color/grey" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_add_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

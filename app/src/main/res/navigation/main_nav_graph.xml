@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/recordFragment"
-        android:name="com.mrndevs.moner.ui.record.RecordFragment"
+        android:name="com.mrndevs.moner.ui.main.record.RecordFragment"
         android:label="fragment_record"
         tools:layout="@layout/fragment_record" />
 
     <fragment
         android:id="@+id/transactionFragment"
-        android:name="com.mrndevs.moner.ui.transaction.TransactionFragment"
+        android:name="com.mrndevs.moner.ui.main.transaction.TransactionFragment"
         android:label="fragment_transaction"
         tools:layout="@layout/fragment_transaction" />
 

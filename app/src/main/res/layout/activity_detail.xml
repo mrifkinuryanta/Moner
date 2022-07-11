@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/color_primary_variant"
+            app:navigationIconTint="@color/white"
+            app:title="@string/text_title_transaction_detail"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextToolbar"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/iv_detail_record"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_18sdp"
+        android:importantForAccessibility="no"
+        android:theme="@style/ImageViewIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:src="@drawable/ic_money_out_24" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_detail_record"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            tools:text="Hospital" />
+
+        <TextView
+            android:id="@+id/tv_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent "
+            app:layout_constraintStart_toStartOf="@+id/tv_detail_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_detail_title"
+            tools:text="-" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:background="@color/color_background"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout" />
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_18sdp"
+        app:layout_constraintTop_toBottomOf="@id/view">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_title_date"
+                android:textAppearance="@style/TextTitleTableDetail" />
+
+            <TextView
+                android:id="@+id/tv_desc_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextDescTableDetail"
+                tools:text="28 April 2022" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tr_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_title_payment"
+                android:textAppearance="@style/TextTitleTableDetail" />
+
+            <TextView
+                android:id="@+id/tv_desc_payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextDescTableDetail"
+                tools:text="Debit" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_title_type"
+                android:textAppearance="@style/TextTitleTableDetail" />
+
+            <TextView
+                android:id="@+id/tv_desc_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextDescTableDetail"
+                tools:text="Expense" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_title_total"
+                android:textAppearance="@style/TextTitleTableDetail" />
+
+            <TextView
+                android:id="@+id/tv_desc_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:textAppearance="@style/TextDescTableDetail"
+                tools:text="Rp800.000" />
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background"
+        app:layout_constraintTop_toBottomOf="@id/table_layout" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_14sdp"
+        android:backgroundTint="@color/color_secondary"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/text_placeholder_delete"
+        android:textAllCaps="false"
+        android:textColor="@color/color_secondary_variant"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/table_layout"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
